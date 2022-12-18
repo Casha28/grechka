@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>casha</title>
+</head>
+<body>
+	<div id="post">
+		<p class="announc">регистрация</p>
+    	<input class="inp" type="text" id="namePost" placeholder="имя*">
+		<input class="inp" type="text" id="surnamePost" placeholder="фамилия*">
+		<input class="inp" type="text" id="patronymicPost" placeholder="отчество*">
+		<input class="inp" type="text" id="DayPost" placeholder="день рождения*">
+		<input class="inp" type="text" id="phonePost" placeholder="телефон*">
+		<input class="inp" type="text" id="pasSerPost" placeholder="серия паспорта*">
+		<input class="inp" type="text" id="pasNumPost" placeholder="номер паспорта*">
+		<input class="inp" type="text" id="adressPost" placeholder="адрес проживания*">
+		<input class="inp" type="text" id="emailPost" placeholder="почта">
+		<button class="btn" id="confirmPost">подтвердить</button>
+		<p class="answer" id="answerPost"></p>	
+	</div>
+
+	<div id="get">
+		<p class="announc">получить клиента</p>
+		<input class="inp" type="text" id='inpGet' placeholder='id клиента в массиве'>
+		<button class="btn" id='btnGet'>получить</button>
+		<p class="id" id="idGet"></p>
+		<p class="text" id="nameGet"></p>
+		<p class="text" id="surnameGet"></p>
+		<p class="text" id="patronymicGet"></p>
+		<p class="text" id="DayGet"></p>
+		<p class="text" id="phoneGet"></p>
+		<p class="text" id="pasSerGet"></p>
+		<p class="text" id="pasNumGet"></p>
+		<p class="text" id="adressGet"></p>
+		<p class="text" id="emailGet"></p>
+		<p class="answer" id="answerGet"></p>	
+	</div>
+
+	<div id="delete">
+		<p class="announc">удалить клиента</p>
+		<input class="inp" type="text" id='inpDelete' placeholder='id клиента'>
+		<button class="btn" id='btnDelete'>удалить</button>
+		<p class="answer" id="answerDelete"></p>
+	</div>
+
+	<script src="/front/scripts/all.js"></script>
+	<script src="/front/scripts/post.js"></script>
+	<script src="/front/scripts/get.js"></script>
+	<script src="/front/scripts/delete.js"></script>
+</body>
+</html>
