@@ -12,6 +12,8 @@ const email = document.getElementById('emailPost');
 
 const confirmPost = document.getElementById('confirmPost');
 const answerPost = document.getElementById('answerPost');
+const urlPost = 'http://192.168.0.58:5000/api/clients/'
+
 // создание класса для тела запроса post
 class RegistrationUserData {
     constructor(
@@ -54,6 +56,7 @@ async function postData(url = '', data = {}) {
     return response.json()
 };
 
+// обработка кнопки
 confirmPost.addEventListener('click', () => {
     // Создание тела запроса с введёнными данными
     const userData = new RegistrationUserData(
@@ -68,7 +71,7 @@ confirmPost.addEventListener('click', () => {
         email.value
     );
     // Post запрос
-    postData(url, userData).then((data) => {
+    postData(urlPost, userData).then((data) => {
         try {
             answerPost.innerHTML = data;
         } catch (error) {

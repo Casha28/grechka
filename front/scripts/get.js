@@ -5,6 +5,8 @@ const scrollGet = document.getElementById('scrollGet');
 const btnGet = document.getElementById('btnGet');
 const idGet = document.getElementById('idGet');
 const answerErrGet = document.getElementById('answerErrGet');
+const urlGet = 'http://192.168.0.58:5000/api/clients/'
+
 // Функция для fetch запроса с методом get
 async function getData(url = '') {
     const response = await fetch(url, {
@@ -21,9 +23,10 @@ async function getData(url = '') {
     return response.json()
 };
 
+// обработка кнопки
 btnGet.addEventListener('click', () =>{
 // Объявление функции в fetch запросее чтоб был доступ к data получаемое при ответе сервера    
-getData(url).then((data) => {
+getData(urlGet).then((data) => {
         function clients(number){
 
         const clientForm = document.createElement('div')
