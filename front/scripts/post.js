@@ -1,5 +1,18 @@
 'use strict'
+// обявление всех переменных
+const username = document.getElementById('namePost');
+const surname = document.getElementById('surnamePost');
+const patronymic = document.getElementById('patronymicPost');
+const birthDay = document.getElementById('DayPost');
+const phoneNumber = document.getElementById('phonePost');
+const pasportSeries = document.getElementById('pasSerPost');
+const pasportNumber = document.getElementById('pasNumPost');
+const adress = document.getElementById('adressPost');
+const email = document.getElementById('emailPost');
 
+const confirmPost = document.getElementById('confirmPost');
+const answerPost = document.getElementById('answerPost');
+// создание класса для тела запроса post
 class RegistrationUserData {
     constructor(
         username,
@@ -11,7 +24,7 @@ class RegistrationUserData {
         birthDay,
         adress,
         email
-    ) {
+    ){
         this.username = username
         this.surname = surname
         this.patronymic = patronymic
@@ -21,9 +34,10 @@ class RegistrationUserData {
         this.birthDay = birthDay
         this.adress = adress
         this.email = email
-    }
-}
+    };
+};
 
+// Функция для fetch запроса с методом post
 async function postData(url = '', data = {}) {
     const response = await fetch(url, {
         method: 'POST',
@@ -38,11 +52,10 @@ async function postData(url = '', data = {}) {
         body: JSON.stringify(data),
     })
     return response.json()
-}
-
+};
 
 confirmPost.addEventListener('click', () => {
-    
+    // Создание тела запроса с введёнными данными
     const userData = new RegistrationUserData(
         username.value,
         surname.value,
@@ -53,13 +66,13 @@ confirmPost.addEventListener('click', () => {
         birthDay.value,
         adress.value,
         email.value
-    )
-
+    );
+    // Post запрос
     postData(url, userData).then((data) => {
         try {
-            answerPost.innerHTML = data
+            answerPost.innerHTML = data;
         } catch (error) {
-            console.log(error)
-        }
-    })
-})
+            console.log(error);
+        };
+    });
+});

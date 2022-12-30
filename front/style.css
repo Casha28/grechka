@@ -33,21 +33,18 @@ body{
 	font-size: 16px;
 }
 .text{
-	position: relative;
-	left: 1vw;
 	color: white;
-	font-size: 18px;
+	font-size: 15px;
 }
 .answer{
 	color: white;
-	margin: 5px;
-	font-size: 25px;
+	font-size: 20px;
 	align-self: center;
 }
 .answerErr{
 	color: rgb(255, 50, 50);
-	margin: 5px;
-	font-size: 25px;
+	margin: 2px;
+	font-size: 20px;
 	align-self: center;
 }
 
@@ -70,8 +67,13 @@ body{
 }
 .id{
 	color: rgb(151, 255, 191);
-	font-size: 20px;
+	font-size: 17px;
 	align-self: center;
+}
+#scrollGet{
+	overflow: auto;
+	height: 70vh;
+	width: 20vw;
 }
 
 /* удалить клентов */
@@ -110,9 +112,9 @@ body{
 	}
 	.text{
 		position: relative;
-		left: 5vw;
 		color: white;
 		font-size: 20px;
+		align-self: center;
 	}	
 	
 
@@ -128,6 +130,14 @@ body{
 		float: left;
 		width: 100vw;
 		display: flex;
+		flex-direction: column;
+	}
+	#scrollGet{
+		position: sticky;
+		overflow: auto;
+		height: 70vh;
+		width: 90vw;
+		align-self: center;
 		flex-direction: column;
 	}
 	#delete{
