@@ -55,11 +55,11 @@ class ClientsControler{
     async delete(req, res) {
         try {
             await ClientService.delete(req.params.id)
-            res.status(404).json('client deleted')
+            res.status(200).json('клиент успешно удалён')
             // логирование
             console.log(`client ${req.params.id} delete \n`)
         } catch (error) {
-            res.status(500).json(error)
+            res.status(500).json('недействительный id клиента')
             console.log(error)
         }
     }
