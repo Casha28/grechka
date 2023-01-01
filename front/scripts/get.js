@@ -5,7 +5,7 @@ const scrollGet = document.getElementById('scrollGet');
 const btnGet = document.getElementById('btnGet');
 const idGet = document.getElementById('idGet');
 const answerErrGet = document.getElementById('answerErrGet');
-const urlGet = 'http://192.168.0.58:5000/api/clients/'
+const urlGet = 'http://0.0.0.0:5000/api/clients/'
 
 // Функция для fetch запроса с методом get
 async function getData(url = '') {
