@@ -4,7 +4,7 @@ const inpDelete = document.getElementById('inpDelete')
 const btnDelete = document.getElementById('btnDelete')
 const answerDelete = document.getElementById('answerDelete')
 
-const urlDelete = 'http://192.168.0.58:5000/api/clients/'
+const urlDelete = 'http://0.0.0.0:5000/api/clients/'
 
 // Функция для fetch запроса с методом delete
 async function deleteData(url = '') {
