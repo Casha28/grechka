@@ -14,7 +14,7 @@ app.use(cors())
 app.use('/api', router)
 
 const startApp = async() => {
-    await mongoose.connect('mongodb+srv://casha:casha@cluster0.cdaqhrb.mongodb.net/?retryWrites=true&w=majority')
+    await mongoose.connect('mongodbURL')
     app.listen(PORT, () => console.log(`hello, port ${PORT} \n`))
 }
 
